@@ -53,9 +53,9 @@ def renameSeason(dir, name, season) :
             else :
                 f_name = f'{f_name} - S0{season_str}E00{count_str}'
                 
-            new_name = f'{f_name}{f_ext}'
-            os.rename(f, new_name)
-            counter += 1
+        new_name = f'{f_name}{f_ext}'
+        os.rename(f, new_name)
+        counter += 1
             
     return counter
     
