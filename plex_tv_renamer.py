@@ -154,6 +154,13 @@ vPrint(f'Release year: {year}')
 vPrint(f'Season number: {season_num}')
 vPrint(f'Absolute numbering: {absolute}')
 
+# Either remove or replace all illegal characters from file/folder names
+show_name = (show_name.replace(':', ' -').replace('/', '_').replace('\\', '_')
+                        .replace('*', '').replace('?', '').replace("\"", "")
+                        .replace("<", "_").replace(">", "_").replace("|", "_"))
+
+vPrint(f'Modified Name: {show_name}')
+
 counts = (0, 0)
 if(season_num == 0) :
     counts = renameShow(directory, show_name)
