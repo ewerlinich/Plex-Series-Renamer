@@ -26,7 +26,7 @@ def renameSeason(dir, name, season) :
              season is being renamed.
     """
     os.chdir(dir)
-    vPrint(f'Changing directory to {dir}')
+    vPrint(f'Entering {dir}')
     counter = 0
     season_str = str(season)
     
@@ -97,7 +97,7 @@ def renameShow(dir, name) :
         ep_num_one_str = str(ep_num_one)
         ep_num_two_str = str(ep_num_two)
         os.chdir(directory)
-        vPrint(f'Changing directory to {dir}')    
+        vPrint(f'Returning to {dir}')    
         
         new_name = ""
         if((count + 1) > 9) :
@@ -122,7 +122,7 @@ def renameShow(dir, name) :
                 new_name = f'{new_name}00{ep_num_two_str})'
 
         os.rename(f, new_name)
-        vPrint(f'Changing {f} to {new_name}')
+        vPrint(f'Renaming {f} to {new_name}')
         
         ep_num_one = ep_num_two + 1
 
